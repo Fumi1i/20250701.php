@@ -1,0 +1,94 @@
+/* assets/style.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+}
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+h1 { text-align: center; color: #333;}
+form { display: flex;}
+form.flex-column { flex-direction: column; gap: 15px; }
+form textarea{
+    flex-grow: 1;
+    width: 100%;
+    border-radius: 4px 0 0 4px; /* index.phpの追加フォーム用 */  
+}
+
+form input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px; /* index.phpの追加フォーム用 */
+}
+form.flex-column input[type="text"] { border-radius: 4px; /* edit.phpの編集フォーム用 */ }
+form button {
+    padding: 10px 15px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0; /* index.phpの追加フォーム用 */
+    cursor: pointer;
+}
+form.flex-column button {border-radius: 4px; /* edit.phpの編集フォーム用 */}
+form button:hover {background-color: #4cae4c;}
+ul {list-style: none; padding: 0;}
+li {
+    background: #e9e9e9;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+li.completed {
+    background-color: #d4edda;
+    text-decoration: line-through;
+    color: #666;
+}
+.actions {display: flex; gap: 5px; }
+.actions button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.actions .edit {
+    background-color: #f0ad4e;
+    color: white;
+    text-decoration: none; /* aタグのスタイル */
+    padding: 5px 10px; /* aタグのパディング調整 */
+}
+.actions .edit:hover { background-color: #ec971f;}
+.actions .delete { background-color: #d9534f; color: white;}
+.actions .delete:hover { background-color: #c9302c;}
+.toggle-btn { background-color: #5bc0de; color: white;}
+.toggle-btn.completed {
+    background-color: #5cb85c;
+}
+.toggle-btn:hover { opacity: 0.9;}
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.checkbox-group input[type="checkbox"] {
+    width: auto;
+    padding: initial; /* CSSの継承で意図しないパディングが適用されるのを防ぐ */
+    border-radius: initial; /* CSSの継承で意図しないボーダーラディウスが適用されるのを防ぐ */
+}
+.back-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #007bff;
+    text-decoration: none;
+}
+.back-link:hover { text-decoration: underline;}
